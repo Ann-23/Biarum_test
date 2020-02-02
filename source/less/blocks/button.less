@@ -1,0 +1,82 @@
+.button {
+  box-sizing: border-box;
+  display: block;
+  margin: 0 auto;
+  padding-top: 3.5%;
+  padding-bottom: 3.5%;
+  width: 100%;
+  font-family: "MyriadPro", "Arial", sans-serif;
+  font-size: 1em;
+  font-weight: 400;
+  letter-spacing: 0.05em;
+  color: @white;
+  text-align: center;
+  background: @green;
+  border: none;
+  border-radius: 7px;
+  box-shadow: 0 6px 0 @btn-shadow;
+  cursor: pointer;
+
+  &:hover {
+    background-color: @green-d;
+  }
+
+  &:focus {
+    outline: none;
+    color: @gray-btn;
+    background-color: @white;
+    box-shadow: 0 0 10px @shadow;
+  }
+
+  &:active {
+    color: @white;
+    background-color: @green-vd;
+  }
+
+  &:disabled {
+    color: @gray-lt;
+    background-color: @gray-l;
+    box-shadow: none;
+  }
+}
+
+.button--header {
+  margin: 0;
+  border-radius: 0;
+}
+
+@media (min-width: @tablet-width) {
+  .button {
+    padding-top: 3.2%;
+    padding-bottom: 2.2%;
+    font-size: 2.375em;
+  }
+
+  .button--header {
+    border-radius: 7px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .button {
+    padding-top: 0.45%;
+    padding-bottom: 0.4%;
+    font-size: 1.125em;
+    max-width: 203px;
+    max-height: 32px;
+    border-radius: 50px;
+    box-shadow: none;
+  }
+
+  .button--header {
+    padding-top: 0.7%;
+    padding-bottom: 0.8%;
+  }
+
+  .button--form {
+    margin: auto;
+    margin-right: 0;
+    padding-top: 1.2%;
+    padding-bottom: 1%;
+  }
+}
